@@ -52,10 +52,10 @@
         padding: 0;
         @include flex-grid(flex, row, center, center);
         .hero-left{
-            margin-top: -2.5rem;
+            margin-top: -5rem;
         }
         .hero-right{
-            margin-top: 2.5rem;
+            margin-top: .8rem;
         }
     }
 
@@ -64,7 +64,7 @@
         
         @include breakpoint-up(xlarge){
             display: block;
-            padding: 6.125rem;
+            padding: 3.125rem 5rem;
             flex: 35%;
             max-width: 700px;
         }
