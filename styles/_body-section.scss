@@ -1,5 +1,8 @@
 .body{
     text-align: center;
+    @include breakpoint-up(medium){
+        padding: 2rem;
+    }
     @include flex-grid(flex, column, center);
     .img-grid{
         padding: 1.5rem;
@@ -45,10 +48,21 @@
     }
 
     article{
-        max-width: 570px;
-    }
+        @include flex-grid(flex, column, center, center);
+        
+        margin-top: 2rem;
+        max-width: 550px;
 
-    strong, h2, p{
-        padding: 1rem 2.75rem;
+        @include breakpoint-up(xlarge){
+            padding: 2rem;
+        }
+
+        strong, h2, p{
+            padding: 1rem 2.75rem;
+        }
+    
+        h2{
+            max-width: 415px;
+        }
     }
 }

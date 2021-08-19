@@ -265,6 +265,12 @@ button {
           align-items: center;
 }
 
+@media (min-width: 48em) {
+  .body {
+    padding: 2rem;
+  }
+}
+
 .body .img-grid {
   padding: 1.5rem;
   display: -webkit-box;
@@ -326,11 +332,35 @@ button {
 }
 
 .body article {
-  max-width: 570px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+  max-width: 550px;
 }
 
-.body strong, .body h2, .body p {
+@media (min-width: 87.5em) {
+  .body article {
+    padding: 2rem;
+  }
+}
+
+.body article strong, .body article h2, .body article p {
   padding: 1rem 2.75rem;
+}
+
+.body article h2 {
+  max-width: 415px;
 }
 
 .separator2-container {
@@ -340,7 +370,7 @@ button {
 
 .footer-section {
   position: relative;
-  background-color: #4d96a8;
+  background-color: rgba(77, 150, 168, 0.9);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,13 +391,12 @@ button {
   background-image: url("/assets/mobile/image-footer.jpg");
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  background-size: 100%;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  opacity: 0.1;
 }
 
 @media (min-width: 48em) {
