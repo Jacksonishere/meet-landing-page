@@ -1,0 +1,54 @@
+.body{
+    text-align: center;
+    @include flex-grid(flex, column, center);
+    .img-grid{
+        padding: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        max-width: 500px;
+
+        @include breakpoint-up(medium){
+            max-width: 1200px;
+        }   
+        img{
+            flex: 50%;
+            max-width: calc(50% - 1.5rem);
+            margin-top: 1.5rem;
+            border-radius: 8px;
+
+            &:nth-child(odd){
+                margin-right: .75rem;
+                
+                @include breakpoint-up(medium){
+                    margin-right: 0;
+                }
+            }
+            &:nth-child(even){
+                margin-left: .75rem;
+
+                @include breakpoint-up(medium){
+                    margin-left: 0;
+                }
+            }
+
+            @include breakpoint-up(medium){
+                flex: 25%;
+                max-width: calc(25% - 1.5rem);
+
+                &:not(:last-child){
+                    margin-right: .6875rem;
+                }
+            }
+        }
+    }
+
+    article{
+        max-width: 570px;
+    }
+
+    strong, h2, p{
+        padding: 1rem 2.75rem;
+    }
+}

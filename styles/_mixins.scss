@@ -18,6 +18,12 @@ $breakpoints-down: (
 	}
 }
 
+@mixin breakpoint-down($size) {
+	@media (max-width: map-get($breakpoints-down, $size)) {
+		@content;
+	}
+}
+
 @mixin flex-grid($type, $flexdirection:null, $alignitems:null, $justifycontent:null){
     display: $type;
     flex-direction: $flexdirection;

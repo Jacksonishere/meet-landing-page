@@ -49,8 +49,14 @@
     }
 
     @include breakpoint-up(xlarge){
-        padding-top: 0;
+        padding: 0;
         @include flex-grid(flex, row, center, center);
+        .hero-left{
+            margin-top: -2.5rem;
+        }
+        .hero-right{
+            margin-top: 2.5rem;
+        }
     }
 
     .hero-left, .hero-right{

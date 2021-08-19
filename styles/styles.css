@@ -17,6 +17,7 @@ body {
 }
 
 h1 {
+  color: #28283e;
   font-size: 1.875rem;
 }
 
@@ -29,7 +30,19 @@ h1 {
 @media (min-width: 87.5em) {
   h1 {
     font-size: 2.9375rem;
+    line-height: 1.1;
   }
+}
+
+h2 {
+  color: #28283e;
+  font-size: 1.75rem;
+}
+
+strong {
+  color: #4d96a8;
+  letter-spacing: .25rem;
+  text-transform: uppercase;
 }
 
 p {
@@ -107,6 +120,12 @@ button {
   margin-top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+@media (max-width: 87.4375em) {
+  .separator {
+    margin-top: 2.875rem;
+  }
 }
 
 .intro {
@@ -195,7 +214,7 @@ button {
 
 @media (min-width: 87.5em) {
   .intro {
-    padding-top: 0;
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -209,6 +228,12 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .intro .hero-left {
+    margin-top: -2.5rem;
+  }
+  .intro .hero-right {
+    margin-top: 2.5rem;
   }
 }
 
@@ -224,5 +249,197 @@ button {
         -ms-flex: 35%;
             flex: 35%;
   }
+}
+
+.body {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body .img-grid {
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 500px;
+}
+
+@media (min-width: 48em) {
+  .body .img-grid {
+    max-width: 1200px;
+  }
+}
+
+.body .img-grid img {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  max-width: calc(50% - 1.5rem);
+  margin-top: 1.5rem;
+  border-radius: 8px;
+}
+
+.body .img-grid img:nth-child(odd) {
+  margin-right: .75rem;
+}
+
+@media (min-width: 48em) {
+  .body .img-grid img:nth-child(odd) {
+    margin-right: 0;
+  }
+}
+
+.body .img-grid img:nth-child(even) {
+  margin-left: .75rem;
+}
+
+@media (min-width: 48em) {
+  .body .img-grid img:nth-child(even) {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 48em) {
+  .body .img-grid img {
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
+    max-width: calc(25% - 1.5rem);
+  }
+  .body .img-grid img:not(:last-child) {
+    margin-right: .6875rem;
+  }
+}
+
+.body article {
+  max-width: 570px;
+}
+
+.body strong, .body h2, .body p {
+  padding: 1rem 2.75rem;
+}
+
+.separator2-container {
+  position: relative;
+  top: 1.5rem;
+}
+
+.footer-section {
+  position: relative;
+  background-color: #4d96a8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 5.625rem 2.4375rem 4.375rem;
+}
+
+.footer-section::before {
+  position: absolute;
+  content: "";
+  background-image: url("/assets/mobile/image-footer.jpg");
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+}
+
+@media (min-width: 48em) {
+  .footer-section::before {
+    background-image: url("/assets/tablet/image-footer.jpg");
+  }
+}
+
+@media (min-width: 87.5em) {
+  .footer-section::before {
+    background-image: url("/assets/desktop/image-footer.jpg");
+  }
+}
+
+.footer-section h2,
+.footer-section p {
+  color: white;
+  max-width: 300px;
+}
+
+.footer-section p {
+  font-size: 0.875rem;
+  padding: 1.75rem 0;
+  max-width: 560px;
+}
+
+@media (min-width: 87.5em) {
+  .footer-section p {
+    max-width: 350px;
+    font-size: 1.175rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .footer-section h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 48em) {
+  .footer-section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .footer-section {
+    text-align: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.footer-section button {
+  background-color: #845eb0;
+}
+
+.footer-section button:hover {
+  background-color: #d9b8ff;
+}
+
+.footer-section button span {
+  color: #d9b8ff;
 }
 /*# sourceMappingURL=styles.css.map */
