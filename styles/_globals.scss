@@ -16,6 +16,14 @@ body {
 }
 h1 {
 	font-size: 1.875rem;
+
+    @include breakpoint-up(medium){
+        font-size: 2rem;     
+    }
+
+    @include breakpoint-up(xlarge){
+        font-size: 2.9375rem;
+    }
 }
 
 p {
@@ -40,11 +48,17 @@ button {
 	cursor: pointer;
 	border: none;
 	color: white;
-	transition: 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out;
 }
 
 .container {
 	overflow-x: hidden;
+    
+    // @include breakpoint-up(xlarge){
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    // }
 }
 
 .main-logo,
@@ -58,6 +72,10 @@ button {
 	// max-width: 110%;
 	// margin-left: -5%;
 	transform: scale(110%);
+    
+    @include breakpoint-up(xlarge){
+        display: none;
+    }
 }
 
 .separator {
