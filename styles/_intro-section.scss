@@ -2,14 +2,14 @@
     text-align: center;
     padding: 2.75rem; 
 
+    @include flex-grid(flex, column, center, center);
+
     p{
         padding: 1.875rem 0;
     }
 
     article{
-        margin: 0 auto;
         max-width: 457px;
-        
         @include breakpoint-up(xlarge){
             flex: 30%;
             min-width: 534px;
@@ -66,6 +66,7 @@
             display: block;
             padding: 6.125rem;
             flex: 35%;
+            max-width: 700px;
         }
     }
 }
